@@ -3,34 +3,39 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles.js";
 import { navLinks } from "../constants/index.js";
 import { logo, menu, close } from "../assets";
+import { motion, useMotionValue, useTransform } from "framer-motion";
+import { fadeOutOnScroll } from "../utils/motion.js";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const scrollY = useMotionValue(0);
+  const opacity = fadeOutOnScroll(200);
+
+  useEffect(() => {}, []);
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+      className={`${styles.paddingX} w-full flex items-center py-1 pb-0 mb-0 fixed top-0 z-20 bg-transparent`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive("");
-            window.scrollTo("0, 0");
-          }}
-        >
-          <img
-            src={logo}
-            alt="logo"
-            className="w-14 h-14 pb-5 object-contain"
-          />
-          <p className="text-white text-[18px] font-bold cursor-pointer">
-            {" "}
-            | Piotr Rodzen
-          </p>
-        </Link>
+        <motion.div style={{ opacity }}>
+          <div
+            className="flex items-center gap-2"
+            onClick={() => {
+              setActive("");
+              window.scrollTo("0, 0");
+            }}
+          >
+            <img
+              src={logo}
+              alt="logo"
+              className="w-20 h-20 pb-5 object-contain"
+            />
+            <p className="text-white text-[18px] font-bold"> | Piotr Rodzen</p>
+          </div>
+        </motion.div>
+
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li

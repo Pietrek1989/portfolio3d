@@ -16,13 +16,13 @@ import {
   figma,
   docker,
   meta,
-  starbucks,
   tesla,
   shopify,
   carrent,
   jobit,
   tripguide,
   threejs,
+  epicode,
 } from "../assets";
 
 const navLinks = [
@@ -46,15 +46,11 @@ const services = [
     icon: web,
   },
   {
-    title: "React developer",
-    icon: mobile,
-  },
-  {
     title: "Fullstack Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Content Creator/Editor",
     icon: creator,
   },
 ];
@@ -116,16 +112,16 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Full Stack Web Developer - Full Time",
+    company_name: "Epicode Global",
+    icon: epicode,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "December 2022 - May 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Completed a series of advanced courses in web development, covering topics such as backend development and, advanced frontend development",
+      "Acquired skills in database design and implementation, web development with HTML, CSS, and JavaScript, and secure authentication techniques in Node.js applications",
+      "Participated in team building weeks, gaining experience working collaboratively and implementing agile methodologies",
+      "Build real world projects using Node.js, Express.js, and React.js",
     ],
   },
   {

@@ -1,3 +1,3 @@
-import SelectionWrapper from "./SectionWrapper";
+import SectionWrapper from "./SectionWrapper";
 
-export { SelectionWrapper };
+export { SectionWrapper };

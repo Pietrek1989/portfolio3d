@@ -1,5 +1,5 @@
 import React from "react";
-import Tilt from "react-tilt";
+import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -47,7 +47,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        ith a passion for creating dynamic and engaging web applications, I'm
+        With a passion for creating dynamic and engaging web applications, I'm
         always looking for new challenges and opportunities to improve my
         skills. I have experience working with a range of programming languages
         and technologies, including HTML, CSS, JavaScript, React, Node.js,
@@ -59,7 +59,7 @@ const About = () => {
         connect!
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex flex-wrap gap-10 justify-center items-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

@@ -2,12 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import Cube from "./Cube";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto hero">
+    <section className=" relative w-full h-screen mx-auto hero">
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
+        className={`${styles.paddingX}  absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]"></div>
@@ -21,11 +22,12 @@ const Hero = () => {
           With the passion for front end
         </p>
       </div>
-      <ComputersCanvas />
-      <div className="absolute xs-bottom w-full flex justify-center items-center">
+      {/* <ComputersCanvas /> */}
+      <Cube />
+      <div className="absolute xs-bottom w-full flex justify-center items-center bottom-10 ">
         <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3x; border-4 border-secondary flex justify-center items-start p-2">
-            <motion.dev
+          <div className="w-[35px] h-[64px] rounded-lg border-4 border-secondary flex justify-center items-start p-2 ">
+            <motion.devpos
               animate={{
                 y: [0, 24, 0],
               }}
@@ -34,7 +36,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
+              className="w-3 h-3 rounded-full bg-secondary mb-1 "
             />
           </div>
         </a>

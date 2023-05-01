@@ -1,3 +1,6 @@
+import { useAnimation, useMotionValue, useTransform } from "framer-motion";
+import { useEffect } from "react";
+
 export const textVariant = (delay) => {
   return {
     hidden: {
@@ -85,4 +88,21 @@ export const staggerContainer = (staggerChildren, delayChildren) => {
       },
     },
   };
+};
+
+export const fadeOutOnScroll = (distance) => {
+  const scrollY = useMotionValue(0);
+  const opacity = useTransform(scrollY, [0, distance], [1, 0], {
+    clamp: false,
+  });
+  const handleScroll = () => {
+    scrollY.set(window.pageYOffset);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  return opacity;
 };
