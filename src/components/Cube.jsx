@@ -1,7 +1,10 @@
 import { Canvas, useThree, useFrame } from "@react-three/fiber";
-import { useRef, useLayoutEffect } from "react";
+import { useRef, useLayoutEffect, Suspense } from "react";
 import { useTransform, useScroll, useTime } from "framer-motion";
 import { degreesToRadians, progress, mix } from "popmotion";
+import CanvasLoader from "./Loader";
+import { OrbitControls, Preload } from "@react-three/drei";
+
 // import * as THREE from "three";
 
 const Icosahedron = () => (
@@ -30,8 +33,8 @@ const Star = ({ p }) => {
     <mesh ref={ref}>
       {/* <sphereGeometry args={[0.1, 16, 16]} />
       <meshStandardMaterial map={starTexture} /> */}
-      <boxGeometry args={[0.05, 0.05, 0.05]} />
-      <meshBasicMaterial wireframe color="white" />
+      <boxGeometry args={[0.07, 0.07, 0.07]} />
+      <meshBasicMaterial wireframe color="grey" />
     </mesh>
   );
 };
@@ -44,14 +47,14 @@ function Scene({ numStars = 200 }) {
     [0, 1],
     [0.001, degreesToRadians(180)]
   );
-  const distance = useTransform(scrollYProgress, [0, 1], [10, 3]);
+  const distance = useTransform(scrollYProgress, [0, 1], [20, 3]); // adjust the initial distance here
   const time = useTime();
 
   useFrame(({ camera }) => {
     camera.position.setFromSphericalCoords(
       distance.get(),
       yAngle.get(),
-      time.get() * 0.0005
+      time.get() * 0.0002
     );
     camera.updateProjectionMatrix();
     camera.lookAt(0, 0, 0);
@@ -66,8 +69,8 @@ function Scene({ numStars = 200 }) {
 
   return (
     <>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
+      {/* <ambientLight />
+      <pointLight position={[10, 10, 10]} /> */}
       <Icosahedron />
       {stars}
     </>
@@ -77,8 +80,23 @@ function Scene({ numStars = 200 }) {
 export default function Cube() {
   return (
     <div className="container  h-screen mx-auto">
-      <Canvas gl={{ antialias: false }} className="w-screen position-fixed">
-        <Scene />
+      <Canvas
+        gl={{ antialias: false }}
+        className="w-100 position-fixed"
+        // shadows
+        // dpr={[1, 2]}
+        camera={{ position: [10, 3, 5], fov: 25 }}
+        // gl={{ preserveDrawingBuffer: true }}
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls
+            enableZoom={true}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+          />
+          <Scene />
+        </Suspense>
+        <Preload all />
       </Canvas>
     </div>
   );
