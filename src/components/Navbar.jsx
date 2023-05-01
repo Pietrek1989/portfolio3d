@@ -21,12 +21,15 @@ const Navbar = () => {
             window.scrollTo("0, 0");
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <img
+            src={logo}
+            alt="logo"
+            className="w-14 h-14 pb-5 object-contain"
+          />
           <p className="text-white text-[18px] font-bold cursor-pointer">
             {" "}
             | Piotr Rodzen
           </p>
-          <p>hej</p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
