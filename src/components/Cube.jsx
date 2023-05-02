@@ -3,9 +3,16 @@ import { useRef, useLayoutEffect, Suspense } from "react";
 import { useTransform, useScroll, useTime } from "framer-motion";
 import { degreesToRadians, progress, mix } from "popmotion";
 import CanvasLoader from "./Loader";
-import { OrbitControls, Preload } from "@react-three/drei";
+import {
+  Decal,
+  Float,
+  OrbitControls,
+  Preload,
+  useTexture,
+} from "@react-three/drei";
+import logo from "../assets/company/epicode.png";
 
-// import * as THREE from "three";
+import * as THREE from "three";
 
 const Icosahedron = () => (
   <mesh rotation-x={0.35}>
@@ -17,6 +24,7 @@ const Icosahedron = () => (
 
 const Star = ({ p }) => {
   const ref = useRef();
+  const [decal] = useTexture([logo]);
 
   useLayoutEffect(() => {
     const distance = mix(2, 3.5, Math.random());
@@ -31,10 +39,24 @@ const Star = ({ p }) => {
 
   return (
     <mesh ref={ref}>
-      {/* <sphereGeometry args={[0.1, 16, 16]} />
-      <meshStandardMaterial map={starTexture} /> */}
-      <boxGeometry args={[0.07, 0.07, 0.07]} />
-      <meshBasicMaterial wireframe color="grey" />
+      <sphereGeometry args={[0.1, 16, 16]} />
+      {/* <icosahedronGeometry args={[1, 1]} /> */}
+      <meshStandardMaterial
+        color="#fff8eb"
+        polygonOffset
+        polygonOffsetFactor={-5}
+        flatShading
+      />{" "}
+      {/* <boxGeometry args={[0.2, 0.2, 0.2]} /> */}
+      {/* <meshBasicMaterial wireframe color="grey" /> */}
+      <Decal
+        position={[0, 0, 1]}
+        rotation={[2 * Math.PI, 0, 6.25]}
+        scale={1}
+        map={decal}
+        key={decal.name}
+        flatShading
+      />
     </mesh>
   );
 };
@@ -69,10 +91,12 @@ function Scene({ numStars = 200 }) {
 
   return (
     <>
-      {/* <ambientLight />
-      <pointLight position={[10, 10, 10]} /> */}
-      <Icosahedron />
-      {stars}
+      <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+        <ambientLight intensity={0.25} />
+        <directionalLight position={[0, 0, 0.05]} />
+        <Icosahedron />
+        {stars}
+      </Float>
     </>
   );
 }
@@ -84,7 +108,7 @@ export default function Cube() {
         gl={{ antialias: false }}
         className="w-100 position-fixed"
         // shadows
-        // dpr={[1, 2]}
+        dpr={[1, 2]}
         camera={{ position: [10, 3, 5], fov: 25 }}
         // gl={{ preserveDrawingBuffer: true }}
       >

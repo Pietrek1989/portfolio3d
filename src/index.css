@@ -215,3 +215,8 @@ canvas {
   position: fixed;
   width: 100vw !important;
 }
+.overview-text {
+  background-color: #0c0f1b;
+  border-radius: 10px;
+  padding: 1em;
+}
