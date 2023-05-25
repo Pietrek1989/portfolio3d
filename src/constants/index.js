@@ -18,13 +18,15 @@ import {
   meta,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
+  whatsapp,
+  netflix,
+  linkedin,
   threejs,
   epicode,
+  rheingold,
+  benchmark,
+  spotify,
 } from "../assets";
-
 const navLinks = [
   {
     id: "about",
@@ -194,12 +196,16 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Hotel Booking- Haus Rheingold",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Advanced hotel booking platform, featuring a custom-built calendar that intuitively displays available rooms for any given day. With an integrated Stripe payment solution, transactions are secure and seamless. Admins can efficiently manage operations through a comprehensive back-office system that allows for detailed tracking of earnings, reservations, and the ability to issue refunds or update room images. A user-friendly design, including a dark mode for enhanced nighttime browsing, underscores our commitment to user convenience and cutting-edge functionality. Experience the future of hotel booking with us.",
     tags: [
       {
         name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "express",
         color: "blue-text-gradient",
       },
       {
@@ -211,50 +217,123 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: rheingold,
+    source_code_link:
+      "https://github.com/Pietrek1989/hotel-website-rheingold-fe",
   },
   {
-    name: "Job IT",
+    name: "Whatsapp Clone",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "This project is a WhatsApp clone - a real-time chat application. Built using React for a dynamic front-end, it mimics the essential features of WhatsApp. Express.js is used on the backend to handle API requests and authentication. Real-time communication is achieved with Socket.IO for instantaneous message exchange. MongoDB is employed for efficient and scalable data storage. This combination of technologies provides a seamless chatting experience in a scalable, real-time environment.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
+        name: "express",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "mongodb",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "socket.io",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: whatsapp,
+    source_code_link: "https://github.com/pappkartoni/U5-BW-WhatsApp",
+  },
+  {
+    name: "Linkedin Clone",
+    description:
+      "This LinkedIn clone is a social networking platform aimed at professional networking. Built with the power of React for an interactive front-end, it features essential functionalities of the original LinkedIn site. Users can create profiles, make posts, connect with other professionals by adding them as 'connections', and interact with their connections' posts. Express.js is utilized on the backend for handling API requests and user authentication, while MongoDB ensures efficient and scalable storage of user data and posts. This project embodies a professional social networking platform that promotes connection, engagement, and career development.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "express",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: linkedin,
+    source_code_link: "https://github.com/yasirozdemir/U4-BW-LinkedIn-API",
+  },
+  {
+    name: "Spotify Clone",
+    description:
+      " This Spotify clone, built using HTML, CSS, and JavaScript, offers a web-based music streaming experience. It uses API to fetch music data, allowing users to search, browse, and play tracks from Spotify's vast library. The custom-made music player provides a user-friendly interface for listening to music, mirroring the functionality and design of Spotify's own player. The application strikes a balance between elegant design and functionality, delivering an immersive music streaming experience right in the browser.",
+    tags: [
+      {
+        name: "HTML & CSS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "JS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: spotify,
+    source_code_link: "https://github.com/Zaiido/fs-0522-build-week-2",
+  },
+  {
+    name: "Netflix Clone",
+    description:
+      " This Netflix clone, built with modern web technologies, offers an engaging platform to browse and comment on movies. The user interface features a carousel for movie display, similar to Netflix's own design, enhancing the browsing experience. Movies data is fetched from an external API, providing a broad range of films for users to explore. Users can view more information about each movie and add comments, fostering an interactive platform for movie enthusiasts. ",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "JS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: netflix,
+    source_code_link:
+      "https://github.com/Pietrek1989/U3-W2-D3-NETFLIX-REACT-ROUTERS",
+  },
+  {
+    name: "Benchmark(test)",
+    description:
+      "This project is a benchmark quiz page designed to test and evaluate your knowledge. Created using HTML, CSS, and JavaScript, it features a variety of questions across different subjects. Upon completion, users are presented with their results, giving immediate feedback on their performance. With its simple and responsive design, this benchmark quiz offers an engaging way to challenge your knowledge and learn at the same time. It's a straightforward yet powerful tool for self-assessment and learning.",
+    tags: [
+      {
+        name: "HTML & CSS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "JS",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: benchmark,
+    source_code_link: "https://github.com/Pietrek1989/fs-nov22-buildweek-1",
   },
 ];
 

@@ -26,15 +26,20 @@ import shopify from "./company/shopify.png";
 import epicode from "./company/epicode.png";
 import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import rheingold from "./rheingold.png";
+import whatsapp from "./whatsapp.png";
+import linkedin from "./linkedin.png";
+import spotify from "./spotify.png";
+import netflix from "./netflix.png";
+import benchmark from "./benchmark.png";
 
 export {
   logo,
   backend,
+  benchmark,
   creator,
   mobile,
+  netflix,
   web,
   github,
   menu,
@@ -49,6 +54,7 @@ export {
   nodejs,
   reactjs,
   redux,
+  spotify,
   tailwind,
   typescript,
   threejs,
@@ -56,7 +62,7 @@ export {
   shopify,
   epicode,
   tesla,
-  carrent,
-  jobit,
-  tripguide,
+  rheingold,
+  whatsapp,
+  linkedin,
 };
