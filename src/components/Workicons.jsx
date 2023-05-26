@@ -1,21 +1,21 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
+import { fadeIn } from "../utils/motion";
 
 const Workicons = (props) => {
+  const style = {
+    boxShadow:
+      "rgba(50, 50, 93, 0.25) 2px 50px 20px -20px, rgb(0, 0, 10) 5px 50px 60px -30px, rgb(0, 10, 38) 3px 3px 11px 0px inset;",
+  };
+
   const constraintsRef = useRef(null);
 
   return (
-    // <motion.div
-    //   className="container z-10 bg-secondary"
-    //   whileHover={{ scale: 1.2, rotate: 90 }}
-    //   whileTap={{ scale: 0.8, rotate: -90, borderRadius: "100%" }}
-    // >
-    //   <img src={props.icon} alt="icon" />
-    // </motion.div>
-    <motion.div className="container" ref={constraintsRef}>
+    <motion.div className="container " ref={constraintsRef}>
       <motion.img
+        variants={fadeIn("up", "spring", props.index * 0.1, 0.75)}
         src={props.icon}
-        className="item h-24 w-24 bg-secondary rounded-full p-1"
+        className="item h-24 w-24 bg-secondary rounded-full p-1 tech-ball"
         drag
         dragConstraints={constraintsRef}
         dragTransition={{ power: 0.2, damping: 10, timeConstant: 1000 }}

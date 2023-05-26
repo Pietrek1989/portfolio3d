@@ -11,17 +11,17 @@ import { motion } from "framer-motion";
 const Tech = () => {
   return (
     <>
-      <motion.div variants={textVariant}>
+      <motion.div variants={textVariant()} animate="show">
         <h2 className={`${styles.sectionHeadText}`}>My tech stack.</h2>
         <p className={`${styles.sectionSubText} `}>Try draggin the icons!</p>
       </motion.div>
       <div className="flex flex-row flex-wrap justify-center gap-10 z-10 p-5">
-        {technologies.map((technology) => {
+        {technologies.map((technology, index) => {
           console.log(technology);
 
           return (
             <div className="w-28 h-28" key={technology.name}>
-              <Workicons icon={technology.icon} />
+              <Workicons icon={technology.icon} index={index} />
               {/* <BallCanvas icon={technology.icon} /> */}
             </div>
           );
