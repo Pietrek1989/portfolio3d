@@ -8,6 +8,7 @@ module.exports = {
         primary: "#050816",
         halft: "#050816bd",
         secondary: "#aaa6c3",
+        secondaryHover: "rgb(21 16 58 )",
         tertiary: "#151030",
         "black-100": "#100d25",
         "black-200": "#090325",

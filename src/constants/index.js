@@ -126,79 +126,100 @@ const experiences = [
       "Build real world projects using Node.js, Express.js, and React.js",
     ],
   },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  // {
+  //   title: "React Native Developer",
+  //   company_name: "Tesla",
+  //   icon: tesla,
+  //   iconBg: "#E6DEDD",
+  //   date: "Jan 2021 - Feb 2022",
+  //   points: [
+  //     "Developing and maintaining web applications using React.js and other related technologies.",
+  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //     "Implementing responsive design and ensuring cross-browser compatibility.",
+  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   ],
+  // },
+  // {
+  //   title: "Web Developer",
+  //   company_name: "Shopify",
+  //   icon: shopify,
+  //   iconBg: "#383E56",
+  //   date: "Jan 2022 - Jan 2023",
+  //   points: [
+  //     "Developing and maintaining web applications using React.js and other related technologies.",
+  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //     "Implementing responsive design and ensuring cross-browser compatibility.",
+  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   ],
+  // },
+  // {
+  //   title: "Full stack Developer",
+  //   company_name: "Meta",
+  //   icon: meta,
+  //   iconBg: "#E6DEDD",
+  //   date: "Jan 2023 - Present",
+  //   points: [
+  //     "Developing and maintaining web applications using React.js and other related technologies.",
+  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //     "Implementing responsive design and ensuring cross-browser compatibility.",
+  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   ],
+  // },
 ];
 
 const testimonials = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
+    testimonial: "Opinion",
+    name: "Name",
     designation: "CFO",
-    company: "Acme Co",
+    company: "Company",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    testimonial: "Opinion",
+    name: "Name",
+    designation: "CFO",
+    company: "Company",
+    image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    testimonial: "Opinion",
+    name: "Name",
+    designation: "CFO",
+    company: "Company",
+    image: "https://randomuser.me/api/portraits/men/4.jpg",
   },
+  // {
+  //   testimonial:
+  //     "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+  //   name: "Sara Lee",
+  //   designation: "CFO",
+  //   company: "Acme Co",
+  //   image: "https://randomuser.me/api/portraits/women/4.jpg",
+  // },
+  // {
+  //   testimonial:
+  //     "I've never met a web developer who truly cares about their clients' success like Rick does.",
+  //   name: "Chris Brown",
+  //   designation: "COO",
+  //   company: "DEF Corp",
+  //   image: "https://randomuser.me/api/portraits/men/5.jpg",
+  // },
+  // {
+  //   testimonial:
+  //     "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+  //   name: "Lisa Wang",
+  //   designation: "CTO",
+  //   company: "456 Enterprises",
+  //   image: "https://randomuser.me/api/portraits/women/6.jpg",
+  // },
 ];
 
 const projects = [
   {
     name: "Hotel Booking- Haus Rheingold",
     description:
-      "Advanced hotel booking platform, featuring a custom-built calendar that intuitively displays available rooms for any given day. With an integrated Stripe payment solution, transactions are secure and seamless. Admins can efficiently manage operations through a comprehensive back-office system that allows for detailed tracking of earnings, reservations, and the ability to issue refunds or update room images. A user-friendly design, including a dark mode for enhanced nighttime browsing, underscores our commitment to user convenience and cutting-edge functionality. Experience the future of hotel booking with us.",
+      "Hotel booking platform, featuring a custom-built calendar that intuitively displays available rooms for any given day. With an integrated Stripe payment solution. Admins can efficiently manage operations through a comprehensive back-office system that allows for detailed tracking of earnings, reservations, and the ability to issue refunds or update room images. A user-friendly design, including a dark mode for enhanced nighttime browsing in the admin page. ",
     tags: [
       {
         name: "react",
@@ -218,6 +239,7 @@ const projects = [
       },
     ],
     image: rheingold,
+    live_page: "https://hotel-website-rheingold-fe.vercel.app/",
     source_code_link:
       "https://github.com/Pietrek1989/hotel-website-rheingold-fe",
   },
@@ -253,7 +275,7 @@ const projects = [
   {
     name: "Linkedin Clone",
     description:
-      "This LinkedIn clone is a social networking platform aimed at professional networking. Built with the power of React for an interactive front-end, it features essential functionalities of the original LinkedIn site. Users can create profiles, make posts, connect with other professionals by adding them as 'connections', and interact with their connections' posts. Express.js is utilized on the backend for handling API requests and user authentication, while MongoDB ensures efficient and scalable storage of user data and posts. This project embodies a professional social networking platform that promotes connection, engagement, and career development.",
+      "This LinkedIn clone is a social networking platform. Built with the power of React for an interactive front-end, it features essential functionalities of the original LinkedIn site. Users can create profiles, make posts, connect with other professionals by adding them as 'connections', and interact with their connections' posts. Express.js is utilized on the backend for handling API requests and user authentication, while MongoDB ensures efficient and scalable storage of user data and posts.",
     tags: [
       {
         name: "react",
@@ -274,6 +296,7 @@ const projects = [
     ],
     image: linkedin,
     source_code_link: "https://github.com/yasirozdemir/U4-BW-LinkedIn-API",
+    live_page: "https://linked-in-build-fe.vercel.app/feed",
   },
   {
     name: "Spotify Clone",
@@ -334,6 +357,7 @@ const projects = [
     ],
     image: benchmark,
     source_code_link: "https://github.com/Pietrek1989/fs-nov22-buildweek-1",
+    live_page: "https://pietrek1989.github.io/fs-nov22-buildweek-1/",
   },
 ];
 

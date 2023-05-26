@@ -15,9 +15,10 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  live_page,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.3, 0.75)}>
       <Tilt
         options={{
           max: 45,
@@ -41,9 +42,22 @@ const ProjectCard = ({
               <img
                 src={github}
                 alt="source code"
-                className="w-1/2 h-1/2 object-contain"
+                className="w-1/2 h-1/2 object-contain hover:scale-150"
               />
             </div>
+            {live_page && (
+              <div
+                onClick={() => window.open(live_page, "_blank")}
+                className="bg-white text-black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <p
+                  alt="source code"
+                  className="w-1/2 h-1/2 object-contain hover:scale-125"
+                >
+                  url
+                </p>
+              </div>
+            )}
           </div>
         </div>
 
@@ -71,20 +85,19 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <h2 className={`${styles.sectionHeadText}`}>My work.</h2>
+        <p className={`${styles.sectionSubText} `}>Projects</p>
       </motion.div>
 
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="bg-tertiary rounded-[20px] p-5 mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          real-world examples of my work. Each project is briefly described and
+          has github link and if available, live website link. Some work are
+          done solo and some were done in a team.
         </motion.p>
       </div>
 
