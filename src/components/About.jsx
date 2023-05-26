@@ -52,7 +52,7 @@ const About = () => {
         skills. I have experience working with a range of programming languages
         and technologies, including HTML, CSS, JavaScript, React, Node.js,
         Express JS, Typescript, MongoDB . I enjoy working on both front-end and
-        back-end developmentfe! In my free time, I love tinkering with new
+        back-end development! In my free time, I love tinkering with new
         technologies and experimenting with different web development
         techniques. If you're looking for a dedicated and motivated team member
         who's ready to jump in and start contributing from day one, I'd love to
