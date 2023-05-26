@@ -39,16 +39,17 @@ const Star = ({ p }) => {
 
   return (
     <mesh ref={ref}>
-      <sphereGeometry args={[0.1, 16, 16]} />
+      {/* <sphereGeometry args={[0.1, 16, 16]} /> */}
+      <boxGeometry args={[0.2, 0.2, 0.2]} />
+
       {/* <icosahedronGeometry args={[1, 1]} /> */}
-      <meshStandardMaterial
+      {/* <meshStandardMaterial
         color="#fff8eb"
         polygonOffset
         polygonOffsetFactor={-5}
         flatShading
-      />{" "}
-      {/* <boxGeometry args={[0.2, 0.2, 0.2]} /> */}
-      {/* <meshBasicMaterial wireframe color="grey" /> */}
+      />{" "} */}
+      <meshBasicMaterial wireframe color="grey" />
       <Decal
         position={[0, 0, 1]}
         rotation={[2 * Math.PI, 0, 6.25]}

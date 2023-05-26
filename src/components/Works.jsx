@@ -6,7 +6,7 @@ import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn, staggerContainer, textVariant } from "../utils/motion";
 
 const ProjectCard = ({
   index,
@@ -18,7 +18,7 @@ const ProjectCard = ({
   live_page,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.3, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.4, 0.75)}>
       <Tilt
         options={{
           max: 45,
@@ -83,7 +83,14 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <>
+    <motion.section
+      variants={staggerContainer()}
+      initial="hidden"
+      viewport={{ once: true, amount: 0.25 }}
+      animate="show"
+      className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+    >
+      <span className="hash-span">&nbsp;</span>
       <motion.div variants={textVariant()}>
         <h2 className={`${styles.sectionHeadText}`}>My work.</h2>
         <p className={`${styles.sectionSubText} `}>Projects</p>
@@ -106,8 +113,8 @@ const Works = () => {
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
-    </>
+    </motion.section>
   );
 };
 
-export default SectionWrapper(Works, "");
+export default Works;

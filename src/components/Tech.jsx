@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 const Tech = () => {
   return (
     <>
-      <motion.div variants={textVariant()} animate="show">
+      <motion.div variants={textVariant()}>
         <h2 className={`${styles.sectionHeadText}`}>My tech stack.</h2>
         <p className={`${styles.sectionSubText} `}>Try draggin the icons!</p>
       </motion.div>

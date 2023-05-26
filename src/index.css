@@ -220,10 +220,7 @@ canvas {
   border-radius: 10px;
   padding: 1em;
 }
-.item {
-  box-shadow: rgba(50, 50, 93, 0.25) 2px 50px 20px -20px,
-    rgb(0, 0, 10) 5px 50px 60px -30px, rgb(0, 10, 38) 3px 3px 11px 0px inset !important;
-}
+
 .tech-ball {
   box-shadow: rgba(50, 50, 93, 0.25) 2px 50px 20px -20px,
     rgb(0, 0, 10) 5px 50px 60px -30px, rgb(0, 10, 38) 3px 3px 11px 0px inset !important;
