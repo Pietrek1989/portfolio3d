@@ -79,7 +79,7 @@ const Contact = () => {
     <div className={`xl:mt-12 overflow-hidden `}>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className=" bg-black-100 p-8 rounded-2xl w-3/4 mx-auto"
+        className=" bg-black-100 p-8 rounded-2xl w-full md:w-3/4 mx-auto"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
