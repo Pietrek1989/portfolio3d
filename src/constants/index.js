@@ -13,11 +13,8 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
-  docker,
-  meta,
-  tesla,
-  shopify,
+  bootstrap,
+  Postgresql,
   whatsapp,
   netflix,
   linkedin,
@@ -25,7 +22,9 @@ import {
   epicode,
   rheingold,
   benchmark,
+  adobePremiere,
   spotify,
+  adobePhoto,
 } from "../assets";
 const navLinks = [
   {
@@ -60,7 +59,7 @@ const services = [
 const technologies = [
   {
     name: "HTML 5",
-    icon: "https://res.cloudinary.com/dvagn6szo/image/upload/v1682089110/u5/whatsapp/avatars/mvmeowfgulbwaxtl5pbn.png",
+    icon: html,
   },
   {
     name: "CSS 3",
@@ -83,6 +82,10 @@ const technologies = [
     icon: redux,
   },
   {
+    name: "MyDog ",
+    icon: "https://res.cloudinary.com/dvagn6szo/image/upload/v1682089110/u5/whatsapp/avatars/mvmeowfgulbwaxtl5pbn.png",
+  },
+  {
     name: "Tailwind CSS",
     icon: tailwind,
   },
@@ -103,12 +106,20 @@ const technologies = [
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "bootstrap",
+    icon: bootstrap,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "Postgresql",
+    icon: Postgresql,
+  },
+  {
+    name: "AdobePremierePro",
+    icon: adobePremiere,
+  },
+  {
+    name: "AdobePhotoshop",
+    icon: adobePhoto,
   },
 ];
 

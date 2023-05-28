@@ -18,7 +18,7 @@ const ProjectCard = ({
   live_page,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.4, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.4, 0.75)} id="work">
       <Tilt
         options={{
           max: 45,

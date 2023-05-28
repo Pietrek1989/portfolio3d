@@ -216,7 +216,7 @@ canvas {
   width: 100vw !important;
 }
 .overview-text {
-  background-color: #0c0f1b;
+  background-color: #161f34;
   border-radius: 10px;
   padding: 1em;
 }
@@ -246,7 +246,7 @@ footer .navigation {
   color: white;
   border-radius: 10px;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-  background: #151030;
+  background: #09253c;
   margin: 5px;
   transition: 0.3s;
   justify-content: center;
@@ -295,4 +295,10 @@ footer .navigation {
 }
 #facebook span {
   color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .cube {
+    margin-top: 12em;
+  }
 }
