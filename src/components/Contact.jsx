@@ -50,7 +50,7 @@ const Contact = () => {
           from_name: form.name,
           to_name: "Piotr Rodzen",
           from_email: form.email,
-          to_email: process.env.emailAdress,
+          to_email: process.env.VITE_APP_EMAIL_ADDRESS,
           message: form.message,
         },
         process.env.VITE_APP_EMAILJS_PUBLIC_KEY
