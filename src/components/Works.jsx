@@ -18,7 +18,7 @@ const ProjectCard = ({
   live_page,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.4, 0.75)} id="work">
+    <motion.div variants={fadeIn("up", "spring", index * 0.4, 0.75)}>
       <Tilt
         options={{
           max: 45,
@@ -89,6 +89,7 @@ const Works = () => {
       viewport={{ once: true, amount: 0.25 }}
       animate="show"
       className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+      id="work"
     >
       <span className="hash-span">&nbsp;</span>
       <motion.div variants={textVariant()}>
