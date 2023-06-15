@@ -282,6 +282,7 @@ const projects = [
     ],
     image: whatsapp,
     source_code_link: "https://github.com/pappkartoni/U5-BW-WhatsApp",
+    live_page: "https://u5-bw-whatsapp-fe.vercel.app/",
   },
   {
     name: "Linkedin Clone",
@@ -329,6 +330,7 @@ const projects = [
     ],
     image: spotify,
     source_code_link: "https://github.com/Zaiido/fs-0522-build-week-2",
+    live_page: "https://github.com/Pietrek1989/fs-0522-build-week-2-Spotify",
   },
   {
     name: "Netflix Clone",
