@@ -66,7 +66,7 @@ const WorksProjectCard = ({
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
+              className={`tag text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full ${tag.color} ${tag.bg}`}
             >
               #{tag.name}
             </p>

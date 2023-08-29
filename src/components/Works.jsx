@@ -22,14 +22,46 @@ SwiperCore.use([Navigation]);
 const Works = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 2;
-  const totalPages = Math.ceil(projects.length / projectsPerPage);
+  const [selectedTags, setSelectedTags] = useState([]);
+
+  const projectsPerPage = 3;
+  const filteredProjects =
+    selectedTags.length > 0
+      ? projects.filter((project) =>
+          selectedTags.every((selectedTag) =>
+            project.tags.some(
+              (projectTag) => projectTag.name === selectedTag.name
+            )
+          )
+        )
+      : projects;
+
+  const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
 
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
-  const currentProjects = projects.slice(
+  const currentProjects = filteredProjects.slice(
     indexOfFirstProject,
     indexOfLastProject
+  );
+  const toggleTag = (tag) => {
+    setSelectedTags((prevTags) => {
+      const tagExists = prevTags.some((prevTag) => prevTag.name === tag.name);
+
+      if (tagExists) {
+        return prevTags.filter((prevTag) => prevTag.name !== tag.name);
+      } else {
+        return [...prevTags, tag];
+      }
+    });
+  };
+
+  const uniqueTags = Array.from(
+    new Map(
+      projects
+        .flatMap((project) => project.tags)
+        .map((tag) => [tag["name"], tag])
+    ).values()
   );
 
   useEffect(() => {
@@ -44,6 +76,7 @@ const Works = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   return (
     <motion.section
       variants={staggerContainer()}
@@ -68,6 +101,25 @@ const Works = () => {
           has github link and if available, live website link. Some work are
           done solo and some were done in a team.
         </motion.p>
+      </div>
+
+      <div className="tag-section  mt-5 ">
+        {uniqueTags.map((tag, index) => (
+          <span
+            key={index}
+            className={`tag text-xs font-mediummr-2 px-3 py-1 rounded-full cursor-pointer hover:scale-105 ${
+              tag.color
+            } ${tag.bg} ${
+              selectedTags.some((t) => t.name === tag.name) ? "active-tag" : ""
+            }`}
+            onClick={() => toggleTag(tag)}
+          >
+            {selectedTags.some((t) => t.name === tag.name) && (
+              <BsCircleFill className="text-green-500 inline-block" />
+            )}
+            #{tag.name} {""}
+          </span>
+        ))}
       </div>
       {isMobile ? (
         <div className="mt-20 w-100 relative">
