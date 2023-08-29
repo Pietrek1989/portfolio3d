@@ -138,7 +138,7 @@ const Works = () => {
             centeredSlides={true}
             className="swiper-gallery"
           >
-            {projects.map((project, index) => (
+            {currentProjects.map((project, index) => (
               <SwiperSlide
                 key={index}
                 style={{ display: "inline-block", minWidth: "300px" }}
