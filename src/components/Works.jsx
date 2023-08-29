@@ -1,94 +1,56 @@
-import React from "react";
-import { Tilt } from "react-tilt";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import "swiper/swiper-bundle.min.css";
 
 import { styles } from "../styles";
-import { github } from "../assets";
-import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, staggerContainer, textVariant } from "../utils/motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Pagination } from "swiper";
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-  live_page,
-}) => {
-  return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.4, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-      >
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt="project_image"
-            className="w-full h-full object-cover rounded-2xl"
-          />
+import {
+  BsCircle,
+  BsCircleFill,
+  BsFillCaretLeftFill,
+  BsFillCaretRightFill,
+} from "react-icons/bs";
+import WorksProjectCard from "./WorksProjectCard";
+import { SectionWrapper } from "../hoc";
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain hover:scale-150"
-              />
-            </div>
-            {live_page && (
-              <div
-                onClick={() => window.open(live_page, "_blank")}
-                className="bg-white text-black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-              >
-                <p
-                  alt="source code"
-                  className="w-1/2 h-1/2 object-contain hover:scale-125"
-                >
-                  url
-                </p>
-              </div>
-            )}
-          </div>
-        </div>
-
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
-        </div>
-
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p
-              key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
-            >
-              #{tag.name}
-            </p>
-          ))}
-        </div>
-      </Tilt>
-    </motion.div>
-  );
-};
+SwiperCore.use([Navigation]);
 
 const Works = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 2;
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
+
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = projects.slice(
+    indexOfFirstProject,
+    indexOfLastProject
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 900);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <motion.section
       variants={staggerContainer()}
       initial="hidden"
       viewport={{ once: true, amount: 0.25 }}
       animate="show"
-      className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+      className={` relative z-0 `}
       id="work"
     >
       <span className="hash-span">&nbsp;</span>
@@ -96,7 +58,6 @@ const Works = () => {
         <h2 className={`${styles.sectionHeadText}`}>My work.</h2>
         <p className={`${styles.sectionSubText} `}>Projects</p>
       </motion.div>
-
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
@@ -108,14 +69,67 @@ const Works = () => {
           done solo and some were done in a team.
         </motion.p>
       </div>
-
-      <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
-      </div>
+      {isMobile ? (
+        <div className="mt-20 w-100 relative">
+          <div className="swiper-button-prev  cursor-pointer hover:scale-105 ">
+            <BsFillCaretLeftFill />
+          </div>
+          <div className="swiper-button-next  cursor-pointer hover:scale-105 h-[24px] w-[24px]">
+            <BsFillCaretRightFill />
+          </div>
+          <Swiper
+            navigation={{
+              prevEl: ".swiper-button-prev",
+              nextEl: ".swiper-button-next",
+            }}
+            slidesPerView={"auto"}
+            centeredSlides={true}
+            className="swiper-gallery"
+          >
+            {projects.map((project, index) => (
+              <SwiperSlide
+                key={index}
+                style={{ display: "inline-block", minWidth: "300px" }}
+              >
+                <div className="someClassName">
+                  <WorksProjectCard index={index} {...project} />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      ) : (
+        <>
+          <div className="mt-20 w-100 flex flex-row flex-wrap gap-7 justify-center">
+            {currentProjects.map((project, index) => (
+              <WorksProjectCard
+                key={`project-${index}`}
+                index={index}
+                {...project}
+              />
+            ))}
+          </div>
+          <div className="flex justify-center space-x-4 mt-4 ">
+            {Array.from({ length: totalPages }, (_, index) =>
+              currentPage === index + 1 ? (
+                <BsCircleFill
+                  key={index}
+                  className="cursor-pointer text-[#257cf0]"
+                  onClick={() => setCurrentPage(index + 1)}
+                />
+              ) : (
+                <BsCircle
+                  key={index}
+                  className="cursor-pointer text-[#257cf0]"
+                  onClick={() => setCurrentPage(index + 1)}
+                />
+              )
+            )}
+          </div>
+        </>
+      )}
     </motion.section>
   );
 };
 
-export default Works;
+export default SectionWrapper(Works, "");

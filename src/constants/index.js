@@ -230,7 +230,7 @@ const projects = [
   {
     name: "Hotel Booking- Haus Rheingold",
     description:
-      "Hotel booking platform, featuring a custom-built calendar that intuitively displays available rooms for any given day. With an integrated Stripe payment solution. Admins can efficiently manage operations through a comprehensive back-office system that allows for detailed tracking of earnings, reservations, and the ability to issue refunds or update room images. A user-friendly design, including a dark mode for enhanced nighttime browsing in the admin page. ",
+      "Hotel booking platform, with a custom-built calendar that  displays available rooms for any given day. With an integrated Stripe payments. Admins can  manage operations through a  back-office system that allows for tracking of earnings, reservations, and the ability to issue refunds or update room details. AI Chatbot in function of FAQ powered by Stack.ai with answers to all  questions related to the hotel.",
     tags: [
       {
         name: "react",
@@ -257,7 +257,7 @@ const projects = [
   {
     name: "Whatsapp Clone",
     description:
-      "This project is a WhatsApp clone - a real-time chat application. Built using React for a dynamic front-end, it mimics the essential features of WhatsApp. Express.js is used on the backend to handle API requests and authentication. Real-time communication is achieved with Socket.IO for instantaneous message exchange. MongoDB is employed for efficient and scalable data storage. This combination of technologies provides a seamless chatting experience in a scalable, real-time environment.",
+      "This project is WhatsApp clone - a real-time chat application. Built using React for a dynamic front-end, it mimics the essential features of WhatsApp. Express.js is used on the backend to handle API requests and authentication. Real-time communication is achieved with Socket.IO for instantaneous message exchange. MongoDB is employed for efficient and robust data storage of users and messages",
     tags: [
       {
         name: "react",
@@ -287,7 +287,7 @@ const projects = [
   {
     name: "Linkedin Clone",
     description:
-      "This LinkedIn clone is a social networking platform. Built with the power of React for an interactive front-end, it features essential functionalities of the original LinkedIn site. Users can create profiles, make posts, connect with other professionals by adding them as 'connections', and interact with their connections' posts. Express.js is utilized on the backend for handling API requests and user authentication, while MongoDB ensures efficient and scalable storage of user data and posts.",
+      "This LinkedIn clone is a social networking platform. Built with the power of React for an interactive front-end, it features some functionalities of the original LinkedIn site. Users can create profiles, make posts, connect with other professionals by adding them as 'connections', and interact with their connections' posts. Express.js is utilized on the backend for handling API requests and user authentication, while MongoDB ensures efficient and scalable storage of data.",
     tags: [
       {
         name: "react",

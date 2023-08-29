@@ -16,7 +16,7 @@
   padding-top: 5em;
 }
 .bg-hero {
-  background-image: url(./assets/herobg.png);
+  background-image: url(./assets//hero7.png);
   background-image: no-repeat;
   object-fit: contain;
 }
@@ -301,4 +301,14 @@ footer .navigation {
   .cube {
     margin-top: 5em;
   }
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
