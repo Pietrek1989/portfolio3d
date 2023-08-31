@@ -24,7 +24,7 @@ const Works = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedTags, setSelectedTags] = useState([]);
 
-  const projectsPerPage = 3;
+  const projectsPerPage = 6;
   const filteredProjects =
     selectedTags.length > 0
       ? projects.filter((project) =>
@@ -107,7 +107,7 @@ const Works = () => {
         {uniqueTags.map((tag, index) => (
           <span
             key={index}
-            className={`tag text-xs font-mediummr-2 px-3 py-1 rounded-full cursor-pointer hover:scale-105 ${
+            className={`tag text-xs font-mediummr-2 px-3 mx-1 py-1 rounded-full cursor-pointer hover:scale-105 ${
               tag.color
             } ${tag.bg} ${
               selectedTags.some((t) => t.name === tag.name) ? "active-tag" : ""

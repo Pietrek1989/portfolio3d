@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { Tilt } from "react-tilt";
 import { github } from "../assets";
+import { TbWorldWww } from "react-icons/Tb";
 
 const WorksProjectCard = ({
   index,
@@ -21,7 +22,7 @@ const WorksProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full "
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -48,9 +49,9 @@ const WorksProjectCard = ({
               >
                 <p
                   alt="source code"
-                  className="w-1/2 h-1/2 object-contain hover:scale-125"
+                  className="w-full h-full object-contain hover:scale-125 mx-auto "
                 >
-                  url
+                  <TbWorldWww className="h-6 w-6 ml-2 mt-2" />
                 </p>
               </div>
             )}
