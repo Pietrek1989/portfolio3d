@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { Tilt } from "react-tilt";
 import { github } from "../assets";
-import { TbWorldWww } from "react-icons/Tb";
+import { TbWorldWww } from "react-icons/tb";
 
 const WorksProjectCard = ({
   index,
