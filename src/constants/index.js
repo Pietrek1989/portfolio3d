@@ -24,7 +24,10 @@ import {
   benchmark,
   adobePremiere,
   spotify,
+  speedSurvey,
   adobePhoto,
+  toDoList,
+  nextJs,
 } from "../assets";
 const navLinks = [
   {
@@ -121,6 +124,10 @@ const technologies = [
     name: "AdobePhotoshop",
     icon: adobePhoto,
   },
+  {
+    name: "Next.js",
+    icon: nextJs,
+  },
 ];
 
 const tags = {
@@ -173,6 +180,11 @@ const tags = {
     name: "AI",
     color: "text-slate-900",
     bg: "bg-slate-300",
+  },
+  nextJs: {
+    name: "Next.js",
+    color: "text-black",
+    bg: "bg-white",
   },
 };
 
@@ -299,6 +311,29 @@ const projects = [
     source_code_link:
       "https://github.com/Pietrek1989/hotel-website-rheingold-fe",
   },
+  {
+    name: "To Do List",
+    description:
+      "To-Do List application built using React, and integrated with a drag-and-drop feature to allow easy task management. Users can add tasks, and use GIPHY api to optionally add a gif to the them. User can then move them across different columns, and delete them by dragging them to a bin. The application has a responsive design and persists tasks using Local Storage.",
+    tags: [tags.react, tags.tailwind],
+
+    image: toDoList,
+    source_code_link:
+      "https://github.com/Pietrek1989/CodeClauseInternship_ToDoList/tree/main",
+    live_page: "https://code-clause-internship-to-do-list-gamma.vercel.app/",
+  },
+  {
+    name: "Speed Survey",
+    description:
+      " Built on the robust Next.js 13 framework, SpeedSurvey is a full-stack application offering seamless survey creation, sharing, and data analytics—all housed in a single repository.",
+    tags: [tags.nextJs, tags.react, tags.tailwind, tags.darkMode, tags.mongodb],
+
+    image: speedSurvey,
+    source_code_link:
+      "https://github.com/Pietrek1989/codeclauseinternship-survey",
+    live_page: "https://codeclauseinternship-survey.vercel.app",
+  },
+
   {
     name: "Whatsapp Clone",
     description:

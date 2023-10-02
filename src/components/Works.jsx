@@ -161,18 +161,18 @@ const Works = () => {
               />
             ))}
           </div>
-          <div className="flex justify-center space-x-4 mt-4 ">
+          <div className="flex justify-center space-x-4 mt-8 ">
             {Array.from({ length: totalPages }, (_, index) =>
               currentPage === index + 1 ? (
                 <BsCircleFill
                   key={index}
-                  className="cursor-pointer text-[#257cf0]"
+                  className="cursor-pointer w-8 h-8 text-[#257cf0]"
                   onClick={() => setCurrentPage(index + 1)}
                 />
               ) : (
                 <BsCircle
                   key={index}
-                  className="cursor-pointer text-[#257cf0]"
+                  className="cursor-pointer w-8 h-8 text-[#257cf0]"
                   onClick={() => setCurrentPage(index + 1)}
                 />
               )

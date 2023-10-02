@@ -22,6 +22,7 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import adobePremiere from "./tech/adobePremiere.png";
 import adobePhoto from "./tech/adobePhoto.png";
+import nextJs from "./tech/nextJs.svg";
 
 import epicode from "./company/epicode.png";
 
@@ -31,9 +32,14 @@ import linkedin from "./linkedin.png";
 import spotify from "./spotify.png";
 import netflix from "./netflix.png";
 import benchmark from "./benchmark.png";
+import speedSurvey from "./speedSurvey.png";
+import toDoList from "./toDoList.png";
 
 export {
   logo,
+  nextJs,
+  speedSurvey,
+  toDoList,
   backend,
   benchmark,
   creator,
