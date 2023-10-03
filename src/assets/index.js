@@ -33,13 +33,13 @@ import spotify from "./spotify.png";
 import netflix from "./netflix.png";
 import benchmark from "./benchmark.png";
 import speedSurvey from "./speedSurvey.png";
-import toDoList from "./toDoList.png";
+import todolist from "./todolist.png";
 
 export {
   logo,
   nextJs,
   speedSurvey,
-  toDoList,
+  todolist,
   backend,
   benchmark,
   creator,
