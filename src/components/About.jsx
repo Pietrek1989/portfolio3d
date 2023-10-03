@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn, slideIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
@@ -59,10 +59,40 @@ const About = () => {
         connect!
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10 justify-center items-center">
-        {services.map((service, index) => (
+      <div className="mt-20 flex flex-wrap flex-row  gap-10 justify-end items-end">
+        {/* {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+        ))} */}
+        <div>
+          <motion.div
+            variants={slideIn("left", "spring", 0.7, 1)}
+            className="text-6xl my-5 text-gradient white-glassmorphism blue-glassmorphism"
+          >
+            <div className="text-6xl text-gradient p-3 px-10">
+              Web Developer
+            </div>
+          </motion.div>
+          <motion.div
+            variants={slideIn("left", "spring", 0.9, 1)}
+            className="text-6xl my-5 text-gradient white-glassmorphism blue-glassmorphism"
+          >
+            <div className="text-6xl text-gradient p-3 px-10">
+              Software Engineer{" "}
+            </div>
+          </motion.div>
+          <motion.div
+            variants={slideIn("left", "spring", 1.1, 1)}
+            className="text-6xl my-5 text-gradient white-glassmorphism blue-glassmorphism"
+          >
+            <div className="text-6xl text-gradient p-3 px-10">
+              Content Creator{" "}
+            </div>
+          </motion.div>
+        </div>
+        <div className="flex flex-col justify-center items-center mt-5">
+          <div className="w-5 h-5 rounded-full bg-[#257cf0]"></div>
+          <div className="w-1 sm:h-80 h-40 violet-gradient"></div>
+        </div>
       </div>
     </>
   );

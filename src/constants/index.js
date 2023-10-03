@@ -163,8 +163,8 @@ const tags = {
   },
   api: {
     name: "API",
-    color: "text-gray-900",
-    bg: "bg-white",
+    color: "text-blue-700",
+    bg: "bg-gray-400",
   },
   darkMode: {
     name: "Dark Mode",
@@ -183,8 +183,8 @@ const tags = {
   },
   nextJs: {
     name: "Next.js",
-    color: "text-black",
-    bg: "bg-white",
+    color: "text-cyan-500",
+    bg: "bg-black",
   },
 };
 
