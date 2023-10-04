@@ -22,11 +22,11 @@ const WorksTags = ({ projects, selectedTags, setSelectedTags }) => {
     ).values()
   );
   return (
-    <div className="tag-section  mt-5 ">
+    <div className="tag-section  mt-5 flex flex-wrap ">
       {uniqueTags.map((tag, index) => (
         <span
           key={index}
-          className={`tag text-xs font-mediummr-2 px-3 mx-1 py-1 rounded-full cursor-pointer hover:scale-105 ${
+          className={`tag tag-select text-md my-1 font-medium mr-2 px-3 mx-1 py-1  rounded-full cursor-pointer  ${
             tag.color
           } ${tag.bg} ${
             selectedTags.some((t) => t.name === tag.name) ? "active-tag" : ""
