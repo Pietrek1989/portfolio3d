@@ -24,18 +24,24 @@ const Works = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedTags, setSelectedTags] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const projectsPerPage = 6;
-  const filteredProjects =
-    selectedTags.length > 0
-      ? projects.filter((project) =>
-          selectedTags.every((selectedTag) =>
-            project.tags.some(
-              (projectTag) => projectTag.name === selectedTag.name
-            )
+  const filteredProjects = projects
+    .filter(
+      (project) =>
+        selectedTags.length === 0 ||
+        selectedTags.every((selectedTag) =>
+          project.tags.some(
+            (projectTag) => projectTag.name === selectedTag.name
           )
         )
-      : projects;
+    )
+    .filter(
+      (project) =>
+        searchTerm === "" ||
+        project.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
   const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
 
@@ -89,6 +95,15 @@ const Works = () => {
         selectedTags={selectedTags}
         setSelectedTags={setSelectedTags}
       />
+      <div className="search-section mt-5">
+        <input
+          type="text"
+          placeholder="Search by name..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="p-2 rounded-lg border"
+        />
+      </div>
       {isMobile ? (
         <div className="mt-20 w-100 relative">
           <div className="swiper-button-prev  cursor-pointer hover:scale-105 ">
