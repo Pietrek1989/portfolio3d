@@ -20,6 +20,8 @@ import {
   linkedin,
   threejs,
   epicode,
+  me,
+  codeclause,
   rheingold,
   benchmark,
   adobePremiere,
@@ -190,7 +192,27 @@ const tags = {
 
 const experiences = [
   {
-    title: "Full Stack Web Developer - Full Time",
+    title: "Full Stack Developer - Freelance",
+    company_name: "Code Clause",
+    icon: me,
+    iconBg: "#fff",
+    date: "June 2023 - Ongoing",
+    points: [
+      "Avaible for freelance work on any size webpages, web apps, mobile apps, content creation",
+    ],
+  },
+  {
+    title: "Full Stack Web Developer - Virtual Internship",
+    company_name: "Code Clause",
+    icon: codeclause,
+    iconBg: "#fff",
+    date: "September 2023 - September 2023",
+    points: [
+      "Unpaid Virtual internship to hone the software skills working on various projects",
+    ],
+  },
+  {
+    title: "Full Stack MERN Developer - Full Time bootcamp",
     company_name: "Epicode Global",
     icon: epicode,
     iconBg: "#383E56",
@@ -202,6 +224,7 @@ const experiences = [
       "Build real world projects using Node.js, Express.js, and React.js",
     ],
   },
+
   // {
   //   title: "React Native Developer",
   //   company_name: "Tesla",

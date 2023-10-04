@@ -314,12 +314,8 @@ footer .navigation {
 }
 
 .text-gradient {
-  background-color: #fff;
-  background-image: radial-gradient(
-      at 4% 36%,
-      hsla(0, 0%, 100%, 1) 0,
-      transparent 53%
-    ),
+  background-color: #88a3cc;
+  background-image: radial-gradient(at 4% 36%, #fff 0, transparent 53%),
     radial-gradient(at 0% 80%, rgb(0, 0, 0) 0, transparent 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -356,13 +352,17 @@ footer .navigation {
   background-color: rgba(0, 0, 0, 0);
 }
 .tag-select:hover::before {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.1
-  ) !important; /* Adjust the 0.2 value to make it darker or lighter */
+  background-color: rgba(0, 0, 0, 0.1) !important;
 }
 .tag-select:hover {
   scale: 1.05;
 }
+
+/* .vertical-timeline-element-date {
+  background-color: #161f34;
+  color: white;
+  border-radius: 10px !important;
+  padding: 6px !important;
+  text-align: center !important;
+  font-weight: bold;
+} */

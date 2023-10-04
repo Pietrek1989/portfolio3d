@@ -25,6 +25,8 @@ import adobePhoto from "./tech/adobePhoto.png";
 import nextJs from "./tech/nextJs.svg";
 
 import epicode from "./company/epicode.png";
+import me from "./company/me.jpg";
+import codeclause from "./company/codeclause.png";
 
 import rheingold from "./rheingold.png";
 import whatsapp from "./whatsapp.png";
@@ -64,6 +66,8 @@ export {
   typescript,
   threejs,
   epicode,
+  me,
+  codeclause,
   rheingold,
   whatsapp,
   linkedin,
