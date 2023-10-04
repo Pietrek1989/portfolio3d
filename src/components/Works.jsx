@@ -16,6 +16,7 @@ import {
 } from "react-icons/bs";
 import WorksProjectCard from "./WorksProjectCard";
 import { SectionWrapper } from "../hoc";
+import WorksTags from "./WorksTags";
 
 SwiperCore.use([Navigation]);
 
@@ -43,25 +44,6 @@ const Works = () => {
   const currentProjects = filteredProjects.slice(
     indexOfFirstProject,
     indexOfLastProject
-  );
-  const toggleTag = (tag) => {
-    setSelectedTags((prevTags) => {
-      const tagExists = prevTags.some((prevTag) => prevTag.name === tag.name);
-
-      if (tagExists) {
-        return prevTags.filter((prevTag) => prevTag.name !== tag.name);
-      } else {
-        return [...prevTags, tag];
-      }
-    });
-  };
-
-  const uniqueTags = Array.from(
-    new Map(
-      projects
-        .flatMap((project) => project.tags)
-        .map((tag) => [tag["name"], tag])
-    ).values()
   );
 
   useEffect(() => {
@@ -102,25 +84,11 @@ const Works = () => {
           done solo and some were done in a team.
         </motion.p>
       </div>
-
-      <div className="tag-section  mt-5 ">
-        {uniqueTags.map((tag, index) => (
-          <span
-            key={index}
-            className={`tag text-xs font-mediummr-2 px-3 mx-1 py-1 rounded-full cursor-pointer hover:scale-105 ${
-              tag.color
-            } ${tag.bg} ${
-              selectedTags.some((t) => t.name === tag.name) ? "active-tag" : ""
-            }`}
-            onClick={() => toggleTag(tag)}
-          >
-            {selectedTags.some((t) => t.name === tag.name) && (
-              <BsCircleFill className="text-green-500 inline-block" />
-            )}
-            #{tag.name} {""}
-          </span>
-        ))}
-      </div>
+      <WorksTags
+        projects={projects}
+        selectedTags={selectedTags}
+        setSelectedTags={setSelectedTags}
+      />
       {isMobile ? (
         <div className="mt-20 w-100 relative">
           <div className="swiper-button-prev  cursor-pointer hover:scale-105 ">
