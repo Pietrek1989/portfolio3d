@@ -9,8 +9,8 @@ const Hero = () => {
       <div
         className={`${styles.paddingX}  absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 z-10`}
       >
-        <h1 className={`${styles.heroHeadText}`}>
-          Hey there, I'm{" "}
+        <h1 className={`${styles.heroHeadText} w-3/4`}>
+          Hey there, I'm <br />
           <span className="text-[#257cf0] z-10">Piotr Rodzen</span>
         </h1>
         <p className={`${styles.heroSubText} mt-2 text-white-100 z-10`}>

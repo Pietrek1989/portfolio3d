@@ -13,7 +13,9 @@ const Tech = () => {
     <>
       <motion.div variants={textVariant()}>
         <h2 className={`${styles.sectionHeadText}`}>My tech stack.</h2>
-        <p className={`${styles.sectionSubText} `}>Try draggin the icons!</p>
+        <p className={`${styles.sectionSubText} `}>
+          You can play with the balls :D!
+        </p>
       </motion.div>
       <div className="flex flex-row flex-wrap justify-center gap-10 z-10 p-5">
         {technologies.map((technology, index) => {
