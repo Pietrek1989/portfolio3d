@@ -22,7 +22,7 @@ const WorksTags = ({ projects, selectedTags, setSelectedTags }) => {
     ).values()
   );
   return (
-    <div className="tag-section  mt-5 flex flex-wrap ">
+    <div className="tag-section  mt-5 flex flex-wrap">
       {uniqueTags.map((tag, index) => (
         <span
           key={index}

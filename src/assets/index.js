@@ -23,6 +23,8 @@ import threejs from "./tech/threejs.svg";
 import adobePremiere from "./tech/adobePremiere.png";
 import adobePhoto from "./tech/adobePhoto.png";
 import nextJs from "./tech/nextJs.svg";
+import reactNative from "./tech/reactNative.png";
+import expo from "./tech/expo.svg";
 
 import epicode from "./company/epicode.png";
 import me from "./company/me.jpg";
@@ -36,6 +38,7 @@ import netflix from "./netflix.png";
 import benchmark from "./benchmark.png";
 import speedSurvey from "./speedSurvey.png";
 import todolist from "./todolist.png";
+import pomodoro from "./pomodoro.png";
 
 export {
   logo,
@@ -47,6 +50,7 @@ export {
   creator,
   mobile,
   netflix,
+  expo,
   web,
   github,
   menu,
@@ -67,10 +71,12 @@ export {
   threejs,
   epicode,
   me,
+  pomodoro,
   codeclause,
   rheingold,
   whatsapp,
   linkedin,
   adobePremiere,
   adobePhoto,
+  reactNative,
 };

@@ -30,6 +30,9 @@ import {
   adobePhoto,
   todolist,
   nextJs,
+  pomodoro,
+  reactNative,
+  expo,
 } from "../assets";
 const navLinks = [
   {
@@ -130,63 +133,86 @@ const technologies = [
     name: "Next.js",
     icon: nextJs,
   },
+  {
+    name: "ReactNative",
+    icon: reactNative,
+  },
+  {
+    name: "Expo Go",
+    icon: expo,
+  },
 ];
 
 const tags = {
   react: {
-    name: "react",
-    color: "text-blue-800",
-    bg: "bg-blue-100",
+    name: "React.js",
+    color: "text-react-text",
+    bg: "bg-react-bg",
   },
   express: {
-    name: "express",
+    name: "Express.js",
     color: "text-yellow-800",
     bg: "bg-yellow-100",
   },
   mongodb: {
-    name: "mongodb",
+    name: "MongoDB",
     color: "text-green-800",
     bg: "bg-green-100",
   },
   tailwind: {
-    name: "tailwind",
+    name: "Tailwind",
     color: "text-indigo-800",
     bg: "bg-indigo-100",
   },
   socketIo: {
-    name: "socket.io",
+    name: "Socket.io",
     color: "text-pink-800",
     bg: "bg-pink-100",
   },
   bootstrap: {
-    name: "bootstrap",
+    name: "Bootstrap",
     color: "text-purple-800",
     bg: "bg-purple-100",
   },
   api: {
     name: "API",
-    color: "text-blue-700",
-    bg: "bg-gray-400",
+    color: "text-teal-300",
+    bg: "bg-teal-800",
   },
   darkMode: {
     name: "Dark Mode",
-    color: "text-white",
+    color: "text-amber-400",
     bg: "bg-black",
   },
   stripe: {
     name: "Stripe",
-    color: "text-blue-800",
-    bg: "bg-gray-100",
+    color: "text-stripe-text",
+    bg: "bg-gray-200",
   },
   ai: {
     name: "AI",
-    color: "text-slate-900",
-    bg: "bg-slate-300",
+    color: "text-emerald-300",
+    bg: "bg-emerald-800",
   },
   nextJs: {
     name: "Next.js",
+    color: "text-white",
+    bg: "bg-black",
+  },
+  reactNative: {
+    name: "React Native",
     color: "text-cyan-500",
     bg: "bg-black",
+  },
+  expoGo: {
+    name: "Expo Go",
+    color: "text-expo-text",
+    bg: "bg-gray-300",
+  },
+  mobileApp: {
+    name: "Mobile app",
+    color: "text-orange-300",
+    bg: "bg-orange-800",
   },
 };
 
@@ -224,46 +250,6 @@ const experiences = [
       "Build real world projects using Node.js, Express.js, and React.js",
     ],
   },
-
-  // {
-  //   title: "React Native Developer",
-  //   company_name: "Tesla",
-  //   icon: tesla,
-  //   iconBg: "#E6DEDD",
-  //   date: "Jan 2021 - Feb 2022",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
-  // {
-  //   title: "Web Developer",
-  //   company_name: "Shopify",
-  //   icon: shopify,
-  //   iconBg: "#383E56",
-  //   date: "Jan 2022 - Jan 2023",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
-  // {
-  //   title: "Full stack Developer",
-  //   company_name: "Meta",
-  //   icon: meta,
-  //   iconBg: "#E6DEDD",
-  //   date: "Jan 2023 - Present",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
 ];
 
 const testimonials = [
@@ -288,30 +274,6 @@ const testimonials = [
     company: "Company",
     image: "https://randomuser.me/api/portraits/men/4.jpg",
   },
-  // {
-  //   testimonial:
-  //     "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-  //   name: "Sara Lee",
-  //   designation: "CFO",
-  //   company: "Acme Co",
-  //   image: "https://randomuser.me/api/portraits/women/4.jpg",
-  // },
-  // {
-  //   testimonial:
-  //     "I've never met a web developer who truly cares about their clients' success like Rick does.",
-  //   name: "Chris Brown",
-  //   designation: "COO",
-  //   company: "DEF Corp",
-  //   image: "https://randomuser.me/api/portraits/men/5.jpg",
-  // },
-  // {
-  //   testimonial:
-  //     "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-  //   name: "Lisa Wang",
-  //   designation: "CTO",
-  //   company: "456 Enterprises",
-  //   image: "https://randomuser.me/api/portraits/women/6.jpg",
-  // },
 ];
 
 const projects = [
@@ -352,6 +314,15 @@ const projects = [
     image: speedSurvey,
     source_code_link:
       "https://github.com/Pietrek1989/codeclauseinternship-survey",
+    live_page: "https://codeclauseinternship-survey.vercel.app",
+  },
+  {
+    name: "Pomodoro app - Timer",
+    description:
+      "Pomodoro-inspired timer built with React Native and Expo Go. Optimized for both beginners and professionals, it offers the perfect blend of the classic Pomodoro technique with fully customizable timer settings to boost productivity.",
+    tags: [tags.reactNative, tags.expoGo, tags.mobileApp],
+    image: pomodoro,
+    source_code_link: "https://github.com/Pietrek1989/pomodoroCustomTimer",
     live_page: "https://codeclauseinternship-survey.vercel.app",
   },
   {

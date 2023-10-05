@@ -26,6 +26,12 @@ module.exports = {
         // #090325
         // #161f34
         "white-100": "#f3f3f3",
+        "react-text": "#45afca",
+        "react-bg": "#F7F7F7",
+        "react-native-text": "#5FD6F4",
+        "react-native-bg": "#1E2128",
+        "stripe-text": "#6058F7",
+        "expo-text": "#00001F",
         // #915eff
 
         // #257cf0

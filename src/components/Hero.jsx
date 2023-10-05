@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
 import Cube from "./Cube";
 
 const Hero = () => {
@@ -19,7 +18,7 @@ const Hero = () => {
           With the passion for front end
         </p>
       </div>
-      {/* <ComputersCanvas /> */}
+      {/* <Canvas /> */}
       <Cube className="-z-1" />
 
       <div className=" absolute xs-bottom w-full flex justify-center items-center bottom-10 z-10">
