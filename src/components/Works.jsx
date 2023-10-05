@@ -86,8 +86,9 @@ const Works = () => {
         >
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described and
-          has github link and if available, live website link. Some work are
-          done solo and some were done in a team.
+          has github link and if available live website link. Some work are done
+          solo and some were done in a team. You can filter them with tags or
+          use search option.
         </motion.p>
       </div>
       <WorksTags

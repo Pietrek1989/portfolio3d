@@ -146,8 +146,9 @@ const technologies = [
 const tags = {
   react: {
     name: "React.js",
-    color: "text-react-text",
-    bg: "bg-react-bg",
+
+    color: "text-cyan-500",
+    bg: "bg-black",
   },
   express: {
     name: "Express.js",
@@ -201,8 +202,8 @@ const tags = {
   },
   reactNative: {
     name: "React Native",
-    color: "text-cyan-500",
-    bg: "bg-black",
+    color: "text-react-text",
+    bg: "bg-react-bg",
   },
   expoGo: {
     name: "Expo Go",
@@ -319,11 +320,12 @@ const projects = [
   {
     name: "Pomodoro app - Timer",
     description:
-      "Pomodoro-inspired timer built with React Native and Expo Go. Optimized for both beginners and professionals, it offers the perfect blend of the classic Pomodoro technique with fully customizable timer settings to boost productivity.",
+      "Pomodoro timer built with React Native and Expo Go. It offers the perfect blend of the classic Pomodoro technique with fully customizable timer settings to boost productivity.",
     tags: [tags.reactNative, tags.expoGo, tags.mobileApp],
     image: pomodoro,
     source_code_link: "https://github.com/Pietrek1989/pomodoroCustomTimer",
-    live_page: "https://codeclauseinternship-survey.vercel.app",
+    live_page:
+      "https://play.google.com/store/apps/details?id=com.rodzenpiotr.pomodoroapp&fbclid=IwAR31PInUWz83_-qZxq-9WKNIsz_RyoVnQpN6iHowCfNM-ZhUW9jCp9dzM4k",
   },
   {
     name: "Whatsapp Clone",
