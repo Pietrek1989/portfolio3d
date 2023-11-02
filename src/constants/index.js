@@ -29,6 +29,7 @@ import {
   speedSurvey,
   adobePhoto,
   todolist,
+  gleitzeit,
   nextJs,
   pomodoro,
   reactNative,
@@ -177,8 +178,8 @@ const tags = {
   },
   api: {
     name: "API",
-    color: "text-teal-300",
-    bg: "bg-teal-800",
+    color: "text-blue-300",
+    bg: "bg-blue-800",
   },
   darkMode: {
     name: "Dark Mode",
@@ -214,6 +215,21 @@ const tags = {
     name: "Mobile app",
     color: "text-orange-300",
     bg: "bg-orange-800",
+  },
+  fullstack: {
+    name: "Fullstack",
+    color: "text-cyan-300",
+    bg: "bg-cyan-800",
+  },
+  user: {
+    name: "Users",
+    color: "text-sky-300",
+    bg: "bg-sky-800",
+  },
+  vite: {
+    name: "Vite",
+    color: "text-amber-300",
+    bg: "bg-amber-800",
   },
 };
 
@@ -286,11 +302,12 @@ const projects = [
       tags.react,
       tags.express,
       tags.mongodb,
-      tags.tailwind,
       tags.api,
+      tags.tailwind,
       tags.darkMode,
       tags.stripe,
       tags.ai,
+      tags.fullstack,
     ],
     image: rheingold,
     live_page: "https://hotel-website-rheingold-fe.vercel.app/",
@@ -300,18 +317,46 @@ const projects = [
   {
     name: "To Do List",
     description:
-      "React-based To-Do List app with drag-and-drop task management, GIPHY API integration for task gifs, and task persistence using Local Storage.",
-    tags: [tags.react, tags.tailwind],
+      "Gleitzeit helper is designed to simplify the management of flexible work model.The application will automatically calculate the total number of hours worked and the remaining hours needed to meet minimum amount.",
+    tags: [
+      tags.react,
+      tags.tailwind,
+      tags.user,
+      tags.mongodb,
+      tags.api,
+      tags.fullstack,
+      tags.express,
+    ],
     image: todolist,
     source_code_link:
-      "https://github.com/Pietrek1989/CodeClauseInternship_ToDoList/tree/main",
-    live_page: "https://code-clause-internship-to-do-list-gamma.vercel.app/",
+      "https://github.com/Pietrek1989/CodeClauseInternship_ToDoList/tree/login-feature",
+    live_page:
+      "https://code-clause-internship-to-do-list-login-feature.vercel.app",
   },
+  {
+    name: "Gleitzeit-helper",
+    description:
+      "Gleitzeit helper is designed to simplify the management of flexible work model.The application will automatically calculate the total number of hours worked and the remaining hours needed to meet minimum amount.",
+    tags: [tags.react, tags.tailwind, tags.vite],
+    image: gleitzeit,
+    source_code_link: "https://github.com/Pietrek1989/gleitzeit-helper",
+    live_page: "https://gleitzeit-helper.vercel.app",
+  },
+
   {
     name: "Speed Survey",
     description:
       "Full-stack survey application on Next.js 13 for creating, sharing, and analyzing surveys, all housed in a single repository.",
-    tags: [tags.nextJs, tags.react, tags.tailwind, tags.darkMode, tags.mongodb],
+    tags: [
+      tags.nextJs,
+      tags.react,
+      tags.tailwind,
+      tags.darkMode,
+      tags.mongodb,
+      tags.api,
+      tags.user,
+      tags.fullstack,
+    ],
     image: speedSurvey,
     source_code_link:
       "https://github.com/Pietrek1989/codeclauseinternship-survey",
@@ -338,6 +383,8 @@ const projects = [
       tags.socketIo,
       tags.bootstrap,
       tags.api,
+      tags.user,
+      tags.fullstack,
     ],
     image: whatsapp,
     source_code_link: "https://github.com/pappkartoni/U5-BW-WhatsApp",
@@ -347,7 +394,15 @@ const projects = [
     name: "Linkedin Clone",
     description:
       "Social networking platform mirroring LinkedIn features like profile creation, connections, and post interactions, built with React, Express.js, and MongoDB.",
-    tags: [tags.react, tags.express, tags.mongodb, tags.bootstrap, tags.api],
+    tags: [
+      tags.react,
+      tags.express,
+      tags.mongodb,
+      tags.api,
+      tags.bootstrap,
+      tags.user,
+      tags.fullstack,
+    ],
     image: linkedin,
     source_code_link: "https://github.com/yasirozdemir/U4-BW-LinkedIn-API",
     live_page: "https://linked-in-build-fe.vercel.app/feed",

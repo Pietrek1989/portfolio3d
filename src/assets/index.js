@@ -39,6 +39,7 @@ import benchmark from "./benchmark.png";
 import speedSurvey from "./speedSurvey.png";
 import todolist from "./todolist.png";
 import pomodoro from "./pomodoro.png";
+import gleitzeit from "./glei4.png";
 
 export {
   logo,
@@ -76,6 +77,7 @@ export {
   rheingold,
   whatsapp,
   linkedin,
+  gleitzeit,
   adobePremiere,
   adobePhoto,
   reactNative,
