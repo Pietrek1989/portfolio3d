@@ -18,6 +18,7 @@ import {
   whatsapp,
   netflix,
   linkedin,
+  chatGptClone,
   threejs,
   epicode,
   me,
@@ -371,6 +372,23 @@ const projects = [
     source_code_link: "https://github.com/Pietrek1989/pomodoroCustomTimer",
     live_page:
       "https://play.google.com/store/apps/details?id=com.rodzenpiotr.pomodoroapp&fbclid=IwAR31PInUWz83_-qZxq-9WKNIsz_RyoVnQpN6iHowCfNM-ZhUW9jCp9dzM4k",
+  },
+  {
+    name: "ChatGPT clone",
+    description:
+      "A responsive and interactive ChatGPT clone that engages with users using OpenAI's API, crafted with a sleek and intuitive interface. Get AI-driven responses in real-time!",
+    tags: [
+      tags.react,
+      tags.express,
+      tags.vite,
+      tags.ai,
+      tags.api,
+      tags.fullstack,
+      tags.darkMode,
+    ],
+    image: chatGptClone,
+    source_code_link: "https://github.com/Pietrek1989/chat-gpt-clone",
+    live_page: "https://pietrek1989.github.io/chat-gpt-clone",
   },
   {
     name: "Whatsapp Clone",

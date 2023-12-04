@@ -40,7 +40,7 @@ import speedSurvey from "./speedSurvey.png";
 import todolist from "./todolist.png";
 import pomodoro from "./pomodoro.png";
 import gleitzeit from "./glei4.png";
-
+import chatGptClone from "./chat-gpt-clone.png";
 export {
   logo,
   nextJs,
@@ -75,6 +75,7 @@ export {
   pomodoro,
   codeclause,
   rheingold,
+  chatGptClone,
   whatsapp,
   linkedin,
   gleitzeit,
